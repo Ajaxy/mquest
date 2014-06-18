@@ -1,0 +1,21 @@
+extends layout
+
+block vars
+    - var title = levelNumber + '. Тени исчезают в полдень.'
+
+block content
+    #content(data-role='content')
+        h3= title
+
+        pre.prettyprint.
+            b = map.balloon.open(
+                map.getCenter(),
+                ':(',
+                { /* ??? */ }
+            );
+
+        include _eval-form
+
+    include _map
+
+    script(type='text/javascript', src='/javascript/levels/shadows.js')

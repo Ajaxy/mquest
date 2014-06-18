@@ -1,0 +1,21 @@
+extends layout
+
+block vars
+    - var title = levelNumber + '. Тонкости API.'
+    - var mapHeight = '40%'
+
+block content
+    #content(data-role='content')
+        h3= title
+
+        pre.prettyprint.
+            lines.forEach(function (path) {
+                c.add(new ymaps.Polyline(path));
+            });
+            map.geoObjects.add(c);
+
+        include _eval-form
+
+    include _map
+
+    script(type='text/javascript', src='/javascript/levels/strokeWidth.js')

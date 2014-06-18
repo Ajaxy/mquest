@@ -1,0 +1,18 @@
+extends layout
+
+block vars
+    - var title = levelNumber + '. Холодная война.'
+
+block content
+    #content(data-role='content')
+        h3= title
+        img(src='/images/levels/statue_of_liberty.jpg', width='45%')
+        img(src='/images/levels/rabochiy_i_kolhoznica.jpg', width='45%', style='float: right;')
+        .clear
+        br
+        br
+        #puzzle-text Меж двух огней на острове льда.
+
+    include _map
+
+    script(type='text/javascript', src='/javascript/levels/ruler.js')

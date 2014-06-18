@@ -1,0 +1,61 @@
+doctype 5
+html
+    block vars
+    head
+        meta(charset='utf-8')
+        meta(name='viewport', content='width=device-width, minimum-scale=1, maximum-scale=1, user-scalable=no')
+        meta(name='apple-mobile-web-app-capable', content='yes')
+        meta(name='apple-mobile-web-app-status-bar-style', content='black')
+        meta(name='apple-mobile-web-app-title', content='Яндекс.Квест')
+        title=title + ' | Квест Яндекс.Карт | YaC 2013'
+        link(rel='stylesheet', href='http://code.jquery.com/mobile/1.4.0-alpha.1/jquery.mobile-1.4.0-alpha.1.min.css')
+        link(rel='stylesheet', href='/stylesheets/style.css')
+        link(rel='apple-touch-icon', href='images/logo.png')
+        script(type='text/javascript', src='/vendor/run_prettify.js')
+        script(type='text/javascript', src='http://code.jquery.com/jquery-2.0.3.min.js')
+        script(type='text/javascript', src='/vendor/jquery.cookie.js')
+        script(type='text/javascript', src='/javascript/init.js')
+        script(type='text/javascript', src='http://code.jquery.com/mobile/1.4.0-alpha.1/jquery.mobile-1.4.0-alpha.1.min.js')
+        script(type='text/javascript', src='http://api-maps.yandex.ru/2.0/?load=package.full&lang=ru-RU')
+        script(type='text/javascript', src='/javascript/main.js')
+    body
+        #page-index.ui-responsive-panel(data-theme='a', data-role='page', data-title=title + ' | Квест Яндекс.Карт | YaC 2013')
+            #menu(data-role='panel', data-display='overlay', data-theme='b')
+                h2
+                    span.red Я
+                    | .
+                    span#username
+                - if (typeof toplist != 'undefined')
+                    h3 Лидеры
+                    #toplist
+                        .rows
+                            - for (var i = 0; i < 15; i++)
+                                .row
+                                    = (i+1) + '. '
+                                    span.username= toplist[i] ? toplist[i].name : ''
+                                    .level= toplist[i] ? toplist[i].level : ''
+
+            #header(data-role='header')
+                h2 Квест API <span class="red">Я</span>ндекс.Карт
+                a.ui-btn-left(href='#menu', data-role='button', data-rel='panel', data-icon='bars', data-iconpos='notext', data-shadow='false')
+                a.ui-btn-right(href='#popup-help', data-role='button', data-rel='popup', data-transition='flow', data-position-to='window', data-icon='info', data-iconpos='notext', data-shadow='false')
+
+            block content
+
+            #popup-help(data-role='popup', data-corners="false")
+                a.ui-btn-right(href='#', data-rel='back', data-role='button', data-theme='a', data-icon='delete', data-iconpos='notext', data-shadow='false') Close
+                h3 Что делать?
+                p 1. Каждый из уровней квеста содержит Карту, на которой спрятано ключевое слово — <b>название следующего уровня</b>.
+                    | Чтобы перейти дальше, найдите его и подставьте вместо текущего в <b>адресную строку</b> браузера вашего устройства.
+                p 2. Ключевое слово может быть чем угодно: <b>географическим названием</b>, <b>ассоциацией</b>, <b>ответом</b> на неявный вопрос или просто отображаться на карте в виде <b>спрятанного</b> на большом масштабе <b>изображения</b>.
+                p 3. <b>Пробуйте подставлять как можно больше вариантов</b>. Вам придется попробовать некоторое количество вариантов, чтобы найти верное слово.
+                    | Некоторые неправильные ответы не ведут на следующий уровень, но могут содержать важные подсказки!
+                p 4. Многие уровни также содержат подсказки в названиях, изображениях и цитатах.
+                p 5. Обычно элементы управления картой и её начальное состояние выбраны <b>не случайно</b>. Возвращайтесь к ним, обновив страницу, если зашли в тупик.
+                p 6. <b>Складывайте все подсказки вместе!</b>
+                p 7. Иногда вам придется переводить географические названия на английский язык. Для этого рекомендуем воспользоваться Википедией.
+                p 8. Ближе к середине игры начинается самое интересное — использование API! Вам понадобится наша <a href="http://api.yandex.ru/maps/doc/intro/concepts/intro.xml" target="_blank">Документация</a>.
+                p 9. Наш <b>хэштег</b>: <a href="http://twitter.com/#mquest" target="_blank"><b>#mquest</b></a>. Убедительная просьба не постить ответы и подсказки.
+                p 10. Удачи!
+
+        script(src='/javascript/yametrika.js')

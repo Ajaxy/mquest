@@ -1,0 +1,22 @@
+extends layout
+
+block vars
+    - var title = 'Пользователи'
+
+block content
+    #content(data-role='content')
+        h3= title
+
+        table#admin-users
+            tr
+                th #
+                th Имя
+                th Уровень
+                th Когда открыл последий уровень
+            - each user, i in users
+                tr
+                    td= i
+                    td= user.name
+                    td= user.level
+                    td= (new Date(user.reached_at)).toLocaleString()
+

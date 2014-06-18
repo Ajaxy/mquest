@@ -1,0 +1,24 @@
+extends layout
+
+block vars
+    - var title = levelNumber + '. Тёмной ночью. Встретимся на узкой дорожке.'
+    - var mapHeight = '70%'
+
+block content
+    #content(data-role='content')
+        h3= title
+        div
+            img(src='/images/levels/london.jpg', width='45%')
+            img(src='/images/levels/cairo.jpg', width='45%', style='float: right;')
+            .clear
+            br
+            br
+            img(src='/images/levels/roma.jpg', width='45%')
+            img(src='/images/levels/spb.jpg', width='45%', style='float: right;')
+            .clear
+        br
+        br
+
+    include _map
+
+    script(type='text/javascript', src='/javascript/levels/routeEditor.js')

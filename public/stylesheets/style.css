@@ -1,0 +1,210 @@
+/* Tablets */
+@media screen and (min-width: 751px) {
+    #content {
+        width: 50%;
+        margin: 0 auto;
+    }
+}
+
+html, body, .ui-page {
+    /*min-height: 1000px;*/
+}
+
+h2 {
+    font-size: 1.38em!important;
+    line-height: 25px!important;
+    margin-top: 0!important;
+    font-weight: 400!important;
+}
+
+h3 {
+    font-size: 1.21em!important;
+    line-height: 25px!important;
+    margin-top: 0!important;
+    font-weight: 400!important;
+}
+
+b {
+    font-weight: 600!important;
+}
+
+.ui-page {
+    font: 0.8em Arial,Helvetica,sans-serif!important;
+    color: black!important;
+    background: #ffffff!important;
+}
+
+.ui-page-theme-a .ui-btn {
+    background: transparent;
+    border: 1px solid rgba(0, 0, 0, 0.3)!important;
+}
+
+.ui-page-theme-a .ui-btn:after {
+    background-color: rgba(0, 0, 0, 0.6)!important;
+}
+
+.clear {
+    clear: both;
+}
+
+#header {
+    background: rgba(246, 245, 243, 0.17) no-repeat right 27px center!important;
+    background-size: auto 90%!important;
+    border-bottom: 1px solid rgba(0, 0, 0, 0.2)!important;
+    border-top: 0!important;
+}
+
+#header h2 {
+    background: url(/images/logo.png) no-repeat 25px center;
+    background-size: auto 130%;
+    margin: 0 auto;
+    line-height: 19px!important;
+}
+
+#content {
+    padding: 20px 10px 0 10px;
+}
+
+#menu {
+    z-index: 1002!important;
+    background: rgba(50, 50, 50, 0.95);
+    border-right: 1px solid #555;
+}
+
+#menu h3 .red {
+    color: red;
+}
+
+#footer {
+    padding: 0;
+    height: 60%;
+    transition: height 300ms ease!important;
+    -webkit-transition: height 300ms ease!important;
+    z-index: 1001!important;
+    overflow-x: visible!important;
+    opacity: 1!important;
+}
+
+.footer-toggle {
+    position: fixed;
+    bottom: 0;
+    right: 5px;
+    z-index: 1000!important;
+}
+
+#footer .footer-toggle {
+    position: absolute;
+    top: -23px;
+    bottom: auto;
+}
+
+#popup-help {
+    padding: 0 15px;
+    font-size: small;
+    background: #fff;
+}
+
+#popup-help p, #popup-help h3 {
+    margin: 15px 0;
+    box-shadow: none!important;
+}
+
+span.red { color: red }
+
+#map {
+    width: 100%;
+    height: 100%;
+}
+
+.ymaps-events-pane {
+    box-shadow: inset 0 5px 10px -7px #000000;
+}
+
+#content pre.prettyprint, #user-js, #puzzle-text {
+    padding: 5px;
+}
+
+#puzzle-text {
+    margin-bottom: 10px;
+    font-style: italic;
+    border-left: 2px solid #000957;
+    background: #eee;
+    padding-left: 10px;
+}
+
+#content pre.prettyprint, #eval-btn, #eval-form td:first-of-type div {
+    border-radius: 0.4em!important;
+}
+
+#eval-form td:eq(1) {
+    text-align: right;
+}
+
+#content pre.prettyprint {
+    border-color: #ccc;
+    margin: 0;
+    background: #fafff8;
+}
+
+#eval-form td:first-of-type {
+    padding-right: 10px;
+}
+
+#eval-btn {
+    padding: 0.45em 0;
+}
+
+#user-js {
+    font-family: monospace;
+}
+
+#toplist .rows {
+    width: 95%;
+}
+
+#toplist .row:nth-child(even) {
+    background: #777;
+}
+
+#toplist .row:nth-child(odd) {
+    background: #666;
+}
+
+#toplist .row:nth-child(1) {
+    background: goldenrod;
+}
+
+#toplist .row {
+    padding: 8px;
+    margin-bottom: 6px;
+}
+
+#toplist .username {
+    font-weight: 400;
+    font-size: 1.21em;
+    max-width: 65px;
+    overflow: hidden;
+}
+
+#toplist .level {
+    float: right;
+}
+
+.error {
+    background: #ffd5d5;
+    border: 1px solid red;
+    color: black;
+    padding: 20px;
+}
+
+.tip {
+    background: #ffd5d5;
+    border: 1px solid red;
+    color: black;
+    padding: 20px;
+}
+
+#admin-users td {
+    padding: 10px;
+    border: 1px solid #ccc;
+}

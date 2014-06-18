@@ -1,0 +1,13 @@
+extends layout
+
+block vars
+    - var title = levelNumber + '. Истина где-то рядом.'
+
+block content
+    #content(data-role='content')
+        h3= title
+
+    include _map
+
+    script(type='text/javascript', src='/javascript/geolocation-button.js')
+    script(type='text/javascript', src='/javascript/levels/geolocation.js')

@@ -1,0 +1,12 @@
+extends layout
+
+block vars
+    - var title = levelNumber + '. Поймай меня, если сможешь.'
+
+block content
+    #content(data-role='content')
+        h3= title
+
+    include _map
+
+    script(type='text/javascript', src='/javascript/levels/catchme.js')

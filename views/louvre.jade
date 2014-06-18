@@ -1,0 +1,16 @@
+extends layout
+
+block vars
+    - var title = levelNumber + '. «Меня трудно найти, легко потерять и невозможно забыть»'
+
+block content
+    #content(data-role='content')
+        h3= title
+        img(src='/images/levels/mona_lisa.jpg', width='100%')
+        br
+        br
+        #puzzle-text Говорят, на Народной карте можно найти почти всё...
+
+    include _map
+
+    script(type='text/javascript', src='/javascript/levels/louvre.js')

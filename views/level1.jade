@@ -1,0 +1,14 @@
+extends layout
+
+block vars
+    - var title = '1-ый уровень'
+
+block content
+    #content(data-role='content')
+        h3 1. Первый шаг уже сделан.
+        #puzzle-text Но не всегда будет так просто!
+        | Не знаете, что делать? Подсказка в правом верхнем углу.
+
+    include _map
+
+    script(type='text/javascript', src='javascript/levels/level1.js')

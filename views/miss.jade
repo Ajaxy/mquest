@@ -1,0 +1,8 @@
+extends layout
+
+block content
+    #content(data-role='content')
+        h3= title
+        != tip
+        p &nbsp;
+        a(href='#', data-role='button', data-rel='back', data-icon='arrow-l', data-inline='true') Назад

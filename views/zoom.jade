@@ -1,0 +1,16 @@
+extends layout
+
+block vars
+    - var title = levelNumber + '. С небес на Землю.'
+
+block content
+    #content(data-role='content')
+        h3= levelNumber + '. Иногда полезно спуститься с небес на землю.'
+        img(src='/images/levels/meteor.jpg', width='100%')
+        br
+        br
+        #puzzle-text Но не всем.
+
+    include _map
+
+    script(type='text/javascript', src='/javascript/levels/zoom.js')

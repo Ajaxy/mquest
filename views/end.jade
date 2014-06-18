@@ -1,0 +1,13 @@
+extends layout
+
+block vars
+    - var title = 'Ура!'
+
+block content
+    #content(data-role='content')
+        h3 Вот это круто!
+        b Вы победили!
+        br
+        br
+        img(src='/images/congrats.jpg', align='center', style='max-width: 100%;')
+        p На этом наш квест пока подошел к концу. Ждём вас за призами! ;)

@@ -1,0 +1,16 @@
+extends layout
+
+block vars
+    - var title = levelNumber + '. Трудности перевода.'
+
+block content
+    #content(data-role='content')
+        h3= title
+        img(src='/images/levels/upside_down.jpg', width='100%')
+        br
+        br
+        #puzzle-text Иногда вы совсем не там, где вам кажется.
+
+    include _map
+
+    script(type='text/javascript', src='/javascript/levels/worlds.js')
