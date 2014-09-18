@@ -50,8 +50,8 @@ $(window).on('mapready', function (e, map) {
             var b = new ymaps.control.Button({
                 data: {
 //                    content: '&nbsp;&nbsp;&nbsp;&nbsp;',
-                    image: '/images/levels/pill_blue.png',
-                    imageSelected: '/images/levels/pill_red.png',
+                    image: 'images/levels/pill_blue.png',
+                    imageSelected: 'images/levels/pill_red.png',
                     i: i,
                     j: j
                 }

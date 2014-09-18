@@ -11,7 +11,7 @@ $(window).on('mapready', function (e, map) {
         pixelRendering: 'static',
         stroke: false,
         fillColor: 'ff0000',
-        fillImageHref: 'http://quest-api.maps.yandex.net/images/solutions/api.png'
+        fillImageHref: 'images/solutions/api.png'
     }));
 
     map.controls.add('smallZoomControl');

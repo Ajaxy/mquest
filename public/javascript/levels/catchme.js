@@ -7,7 +7,7 @@ $(window).on('mapready', function (e, map) {
     placemark = new ymaps.Placemark(msk, {
         balloonContent: 'Отлично.<br/>Держите курс на /severe.'
     }, {
-        iconImageHref: '/images/levels/di_caprio.png',
+        iconImageHref: 'images/levels/di_caprio.png',
         iconImageSize: [85, 200],
         hideIconOnBalloonOpen: false,
         balloonOffset: [40, -40],

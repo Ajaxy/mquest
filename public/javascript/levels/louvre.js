@@ -16,6 +16,6 @@ $(window).on('mapready', function (e, map) {
     }, {
         stroke: false,
         fillColor: 'ff0000',
-        fillImageHref: 'http://quest-api.maps.yandex.net/images/solutions/coldwar.png'
+        fillImageHref: 'images/solutions/coldwar.png'
     }));
 });

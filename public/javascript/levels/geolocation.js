@@ -26,7 +26,7 @@ $(window).on('mapready', function (e, map) {
     map.geoObjects.add(new ymaps.Rectangle([[55.8003, 37.673], [55.8000, 37.6755]], {}, {
         stroke: false,
         fillColor: 'ff0000',
-        fillImageHref: 'http://quest-api.maps.yandex.net/images/solutions/monalisa.png'
+        fillImageHref: 'images/solutions/monalisa.png'
     }));
     map.setCenter([55.75, 37.62], 15);
 });

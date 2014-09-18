@@ -55,7 +55,7 @@ b {
 }
 
 #header h2 {
-    background: url(/images/logo.png) no-repeat 25px center;
+    background: url(../images/logo.png) no-repeat 25px center;
     background-size: auto 130%;
     margin: 0 auto;
     line-height: 19px!important;
